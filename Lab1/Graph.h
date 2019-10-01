@@ -19,4 +19,5 @@ public:
 	void deleteEdge(int x, int y);
 	void PrintGraph();
 	Tree<T>* SpanningTree();
+	vector<ListNode> Prim()
 };

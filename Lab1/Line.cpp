@@ -10,3 +10,11 @@ Line Line::reflection(Line fig2) {
 	Line result(newk, newb);
 	return result;
 }
+void Line::output() {
+	std::cout << k << "x";
+	if (b < 0) std::cout << b;
+	else std::cout << "+" << b;
+}
+void Line::inversion(Circle fig) {
+	if (pow(x0 - fig.x0, 2) + pow(y0 - fig.y0, 2) == pow(fig.radius, 2))
+}

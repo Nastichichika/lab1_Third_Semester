@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 #include "Figure.h"
 #include "Line.h"
 #include "Point.h"
@@ -10,4 +11,5 @@ public:
 	Circle(double radius);
 	Circle reflection(Line a);
 	void inversion(Circle fig);
+	void output();
 };

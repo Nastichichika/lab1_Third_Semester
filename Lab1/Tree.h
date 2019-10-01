@@ -6,10 +6,7 @@
 template <typename T>
 class Tree {
 	NodeTree<T>* root;
-
-	
 	void PrintTree(NodeTree<T>* current, int counter);
-
 public:
 	Tree<T>();
 	NodeTree<T>* getRoot();
