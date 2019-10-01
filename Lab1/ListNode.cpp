@@ -32,7 +32,7 @@ void ListNode::display() {
 	}
 }
 
-void ListNode::deleteNode(int y, int x = -1) {
+void ListNode::deleteNode(int y, int x) {
 	Node* cur = first;
 	if (y > -1) {
 		int temp = x;

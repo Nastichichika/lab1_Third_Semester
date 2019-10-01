@@ -17,7 +17,7 @@ void Graph<T>::deleteVertex(int x) {
 	for (int i = 0; i < adj.size() - 1; i++) {
 		adj[i].deleteNode(x, adj.size());
 	}
-	info[x] = adj[adj.size() - 1];
+	info[x] = info[info.size() - 1];
 	info.pop_back();
 }
 
@@ -42,7 +42,7 @@ void Graph<T>::PrintGraph() {
 }
 
 template <typename T>
-void Graph<T>::SpanningTreeRec(vector<bool> check, int thisVertex, Tree<T>* result) {
+void Graph<T>::SpanningTreeRec(std::vector<bool> check, int thisVertex, Tree<T>* result) {
 	check[thisVertex] = 1;
 	ListNode listVertex = adj[thisVertex];
 	Node* temp = listVertex.getFirst();
@@ -63,7 +63,7 @@ void Graph<T>::SpanningTreeRec(vector<bool> check, int thisVertex, Tree<T>* resu
 template <typename T>
 Tree<T>* Graph<T>::SpanningTree() {
 	int sizeGraph = this->adj.size();
-	vector<bool> check;
+	std::vector<bool> check;
 	Tree<T>* result = new Tree<T>;
 	for (int i = 0; i < sizeGraph; i++)
 		check.push_back(false);

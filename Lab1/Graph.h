@@ -8,7 +8,9 @@ template <typename T>
 class Graph {
 	std::vector<ListNode> adj;
 	std::vector<T> info;
-	void SpanningTreeRec(vector<bool> check, int thisVertex, Tree<T>* result);
+
+	void SpanningTreeRec(std::vector<bool> check, int thisVertex, Tree<T>* result);
+
 public:
 	Graph();
 	void addVertex(T data);
@@ -16,5 +18,5 @@ public:
 	void addEdge(int x, int y);
 	void deleteEdge(int x, int y);
 	void PrintGraph();
-	std::Tree<T>* SpanningTree();
+	Tree<T>* SpanningTree();
 };

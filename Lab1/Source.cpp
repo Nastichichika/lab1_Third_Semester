@@ -71,7 +71,7 @@ public:
 };
 
 int main() {
-	/*Graph<int> abc = Graph<int>();
+	Graph<int> abc = Graph<int>();
 	abc.addVertex(0);
 	abc.addVertex(1);
 	abc.addVertex(2);
@@ -83,16 +83,17 @@ int main() {
 	abc.addEdge(2, 3);
 	abc.PrintGraph();
 	Tree<int>* bcd = abc.SpanningTree();
-	bcd->Print();*/
-	Tree<int> bcd = Tree<int>();
-	bcd.addVertex(5, bcd.getRoot());
-	bcd.addVertex(1, 5);
-	bcd.addVertex(2, 5);
-	bcd.addVertex(3, 5);
-	bcd.addVertex(4, 5);
-	bcd.addVertex(9, 4);
-	bcd.Print();
-	bcd.deleteVertex(5);
-	bcd.Print();
+	bcd->Print();
+	cout << endl << endl;
+	Tree<int> sfdzv = Tree<int>();
+	sfdzv.addVertex(5, sfdzv.getRoot());
+	sfdzv.addVertex(1, 5);
+	sfdzv.addVertex(2, 5);
+	sfdzv.addVertex(3, 5);
+	sfdzv.addVertex(4, 5);
+	sfdzv.addVertex(9, 4);
+	sfdzv.Print();
+	sfdzv.deleteVertex(1);
+	sfdzv.Print();
 	return 0;
 }

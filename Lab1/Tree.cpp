@@ -19,7 +19,7 @@ void Tree<T>::addVertex(T data, NodeTree<T> *current) {
 template<typename T>
 void Tree<T>::addVertex(T data, T current) {
 	NodeTree<T>* temp = SearchElement(root, current);
-	cout << endl << temp->data;
+	std::cout << std::endl << temp->data;
 	addVertex(data, temp);
 }
 
@@ -29,7 +29,6 @@ void Tree<T>::deleteVertex(NodeTree<T> *deleteThis) {
 		deleteVertex(deleteThis->children[i]);
 	}
 	delete deleteThis;
-	deleteThis = nullptr;
 }
 
 template<typename T>
@@ -38,22 +37,18 @@ void Tree<T>::deleteVertex(T dat) {
 	int i;
 	for (i = 0; i < temp->parent->children.size(); i++)
 		if (temp->parent->children[i]->data == dat) break;
-	vector<NodeTree<T>*> temp1 = temp->parent->children;
-	temp1.erase(temp1.begin() + i);
+	temp->parent->children.erase(temp->parent->children.begin() + i);
 	deleteVertex(temp);
-	temp->parent->children = temp1;
-	delete temp;
-	temp = nullptr;
 }
 
 template<typename T>
 void Tree<T>::PrintTree(NodeTree<T>* current, int counter) {
-	if (root == nullptr) cout << "Tree is empty" << endl;
+	if (root == nullptr) std::cout << "Tree is empty" << std::endl;
 	else {
-		if (current != nullptr) { //почему там -572662307
+		if (current != nullptr) {
 			for (int i = 0; i < counter; i++)
-				cout << " ";
-			cout << current->data << endl;
+				std::cout << " ";
+			std::cout << current->data << std::endl;
 			if (current->children.empty())
 				return;
 			else

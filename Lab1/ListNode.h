@@ -11,7 +11,7 @@ class ListNode {
 	Node* first;
 	Node* end;
 public:
-	ListNode() : first(nullptr), end(nullptr);
+	ListNode();
 	Node* getFirst();
 	void addNode(int num);
 	void display();
