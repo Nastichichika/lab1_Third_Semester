@@ -18,5 +18,31 @@
     <ClCompile Include="Source.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeTree.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="ListNode.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graph.h">
+      <Filter>Файлы исходного кода</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Файлы исходного кода</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeTree.h">
+      <Filter>Файлы исходного кода</Filter>
+    </ClInclude>
+    <ClInclude Include="ListNode.h">
+      <Filter>Файлы исходного кода</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
