@@ -1,8 +1,8 @@
 #pragma once
 #include <cmath>
-#include "Figure.h"
-#include "Line.h"
+class Point;
 #include "Point.h"
+#include "Figure.h"
 class Circle : public Figure {
 public:
 	double x0, y0;

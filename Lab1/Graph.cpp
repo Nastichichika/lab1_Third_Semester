@@ -72,34 +72,5 @@ Tree<T>* Graph<T>::SpanningTree() {
 	return result;
 }
 
-template <typename T>
-Tree<T>* Graph<T>::Prim() {
-	int sizeGraph = this->adj.size();
-	Tree<T>* result = new Tree<T>;
-	std::vector<int> check;
-	int padre = 0;
-	int hijo = 0;
-	while (check.size() + 1 < sizeGraph) {
-		padre = hijo;
-		// Marco la fila y elimino la columna del nodo padre.
-		check.push_back(padre);
-		for (int i = 0; i < cn; i++)
-			adyacencia[i][padre] = INF;
-
-		// Encuentro la menor distancia entre las filas marcadas.
-		// El nodo padre es la linea marcada y el nodo hijo es la columna del minimo.
-		int min = INF;
-		for (itVec = markedLines.begin(); itVec != markedLines.end(); itVec++)
-			for (int i = 0; i < cn; i++)
-				if (min > adyacencia[*itVec][i]) {
-					min = adyacencia[*itVec][i];
-					padre = *itVec;
-					hijo = i;
-				}
-
-		arbol[padre][hijo] = min;
-		arbol[hijo][padre] = min;
-	}
-	return arbol;
-}
+template class Graph<int>;
 template class Graph<int>;

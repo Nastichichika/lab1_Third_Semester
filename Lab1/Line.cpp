@@ -15,6 +15,18 @@ void Line::output() {
 	if (b < 0) std::cout << b;
 	else std::cout << "+" << b;
 }
-void Line::inversion(Circle fig) {
-	if (pow(x0 - fig.x0, 2) + pow(y0 - fig.y0, 2) == pow(fig.radius, 2))
+Figure* Line::inversion(Circle fig) {
+	if (k * fig.x0 + b == fig.y0) return new Line(k, b);
+	else {
+		int y1 = 0;
+		int x1 = (y1 - b) / k;
+		Point* point = new Point(x1, y1);
+		point = point->inversion(fig);
+		//
+		int x2 = 0;
+		int y2 = k*x2 + b;
+		Point* point2 = new Point(x2, y2);
+		point = point2->inversion(fig);
+
+	}
 }

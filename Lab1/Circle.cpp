@@ -1,5 +1,4 @@
 #include "Cicrle.h"
-
 Circle::Circle(double x0, double y0, double radius) : radius(radius), x0(x0), y0(y0) {}
 Circle::Circle(double radius) : radius(radius), x0(0), y0(0) {}
 Circle Circle::reflection(Line some) {
@@ -12,7 +11,7 @@ void Circle::inversion(Circle fig) {
 	double newx = x0 + ((radius*radius)*(x0 - fig.x0)) / ((x0 - fig.x0)*(x0 - fig.x0) + (y0 - fig.y0)*(y0 - fig.y0));
 	double newy = y0 + ((radius*radius)*(y0 - fig.y0)) / ((x0 - fig.x0)*(x0 - fig.x0) + (y0 - fig.y0)*(y0 - fig.y0));
 
-	if(pow(x0 - fig.x0,2) + pow(y0 - fig.y0, 2) == pow(fig.radius, 2))
+	if (pow(x0 - fig.x0, 2) + pow(y0 - fig.y0, 2) == pow(fig.radius, 2));
 
 }
 void Circle::output() {
