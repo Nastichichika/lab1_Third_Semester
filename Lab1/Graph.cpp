@@ -73,4 +73,6 @@ Tree<T>* Graph<T>::SpanningTree() {
 }
 
 template class Graph<int>;
-template class Graph<int>;
+template class Graph<double>;
+template class Graph<std::string>;
+template class Graph<std::vector<int>>;

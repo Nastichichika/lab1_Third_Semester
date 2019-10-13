@@ -9,4 +9,8 @@ NodeTree<T>::NodeTree(T data) :parent(nullptr), children(NULL), data(data) {}
 template <typename T>
 NodeTree<T>::NodeTree(T data, NodeTree<T>* parent) :data(data), parent(parent) {}
 
+
 template class NodeTree<int>;
+template class NodeTree<double>;
+template class NodeTree<std::string>;
+template class NodeTree<std::vector<int>>;

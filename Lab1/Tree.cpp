@@ -76,3 +76,6 @@ NodeTree<T>* Tree<T>::SearchElement(NodeTree<T>* nextNode, T dat) {
 }
 
 template class Tree<int>;
+template class Tree<double>;
+template class Tree<std::string>;
+template class Tree<std::vector<int>>;
